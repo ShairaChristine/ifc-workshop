@@ -20,27 +20,28 @@
         @endif
     </head>
     <body class="font-sans antialiased dark:bg-black dark:text-white/50">
-        <div class="bg-white text-black/50">
-            {{-- <img id="background" class="absolute -left-20 top-0 max-w-[877px]" src="https://laravel.com/assets/img/welcome/background.svg" alt="Laravel background" /> --}}
+        <div class="bg-gray-50 text-black/50 dark:bg-black dark:text-white/50">
+            <img id="background" class="absolute -left-20 top-0 max-w-[877px]" src="https://laravel.com/assets/img/welcome/background.svg" alt="Laravel background" />
             <div class="relative min-h-screen flex flex-col items-center justify-center selection:bg-[#FF2D20] selection:text-white">
                 <div class="relative w-full max-w-2xl px-6 lg:max-w-7xl">
-                    <header class="flex items-center gap-2 py-10 justify-between">
-                        <div class="flex lg:justify-left lg:col-start-2">
-                            <img width="158" heigth="58" src="https://www.etanom.com/wp-content/uploads/2024/07/logo-green.png" alt="">
+                    <header class="grid grid-cols-2 items-center gap-2 py-10 lg:grid-cols-3">
+                        <div class="flex lg:justify-center lg:col-start-2">
+                            <img src="https://www.etanom.com/wp-content/uploads/2024/07/logo-green.png" alt="">
+                            
                         </div>
                         @if (Route::has('login'))
                             <nav class="-mx-3 flex flex-1 justify-end">
                                 @auth
                                     <a
                                         href="{{ url('/dashboard') }}"
-                                        class="green-text rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-green/70 focus:outline-none focus-visible:ring-[#FF2D20]"
+                                        class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
                                     >
                                         Dashboard
                                     </a>
                                 @else
                                     <a
                                         href="{{ route('login') }}"
-                                        class="green-text rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-green/70 focus:outline-none focus-visible:ring-[#FF2D20]"
+                                        class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
                                     >
                                         Log in
                                     </a>
@@ -48,7 +49,7 @@
                                     @if (Route::has('register'))
                                         <a
                                             href="{{ route('register') }}"
-                                            class="green-text rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-green/70 focus:outline-none focus-visible:ring-[#FF2D20]"
+                                            class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
                                         >
                                             Register
                                         </a>
@@ -59,102 +60,6 @@
                     </header>
 
                     <main class="mt-6">
-                        <section id="main" class="grid gap-6 lg:grid-cols-2 lg:gap-8 bg-white">
-                            <div
-                                id="docs-card"
-                                class="flex flex-col items-start gap-6 overflow-hidden rounded-lg bg-white p-6 transition duration-300 hover:text-black/70 focus:outline-none md:row-span-3 lg:p-10 lg:pb-10 dark:bg-zinc-900  dark:hover:text-white/70 "
-                            >
-
-                                <div class="relative flex items-center gap-6 lg:items-end">
-                                    <div id="docs-card-content" class="flex items-start gap-6 lg:flex-col">
-
-                                        <div class="pt-3 sm:pt-5 lg:pt-0">
-                                            <h1 class="text-xl font-semibold green-text">Connect to a local, and plant a tree</h1>
-
-                                            <p class="mt-4 text-sm/relaxed">
-                                                Support a farmer or an indigenous person in a rural community in the Philippines to plant and grow a tree for you.
-                                            </p>
-                                            <a href="https://www.etanom.com/product/plant-a-tree/" class="btn-green">Plant Now</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div class="flex items-start gap-4 rounded-lg bg-white p-6 transition duration-300 lg:pb-10 ">
-                                <img fetchpriority="high" decoding="async" width="1024" height="717" src="https://www.etanom.com/wp-content/uploads/2024/09/eTanom-Mockup-Phone-and-Laptop-1-1024x717.png" class="attachment-large size-large wp-image-1747" alt="">
-                            </div>
-                        </section>
-                        <section id="what" class="grid justify-items-center text-center">
-                            <h1 class="text-green">What is eTanom?</h1>
-                            <h2 class="text-green w-8/12">eTanom is a web platform that works like Grab or Uber but for reforestation.</h2>
-                            <p class="w-8/12 tex">We connect people from urban areas who want to plant trees, to people in the Philippines' rural communities for a more collaborative and inclusive reforestation.</p>
-                            <img decoding="async" width="1024" height="576" src="https://www.etanom.com/wp-content/uploads/2024/09/Copy-of-eTanom-Pitch-Deck-August-2024-1024x576.png" class="attachment-large size-large wp-image-1755" alt="">
-                        </section>
-                        <section id="plant">
-                            <div class="grid gap-6 lg:grid-cols-2 lg:gap-8 card items-start rounded-lg p-6 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] transition duration-300 hover:text-black/70 lg:pb-10 dark:hover:text-white/70">
-                                <div class="flex size-12 shrink-0 items-center justify-center bg-[#FF2D20]/10 bg-img">
-                                    {{-- <img loading="lazy" decoding="async" width="1024" height="598" src="https://www.etanom.com/wp-content/uploads/2024/09/IMG_9850-1024x598.png" class="attachment-large size-large wp-image-1689" alt=""> --}}
-                                </div>
-
-                                <div class="py-20">
-                                    <h4 class="text-white font-bold pb-6">Plant a tree</h4>
-                                    <h1 class="text-brown pb-10">Php 200</h1>
-                                    <h2 class="text-xl font-bold text-dark2 pb-2">Be one of our first supporters!</h2>
-
-                                    <p class="mt-4 text-sm/relaxed text-black w-10/12 pb-10">
-                                        Become one of the early supporters of our pilot planters' community at Mapulog Tree Growers Association in Brgy. Mapulog, Naawan, Misamis Oriental, Mindanao, Philippines. <br> <br> Help us establish our first site by pre-buying a tree planting package (1 seedling + planting service) for Php 200!
-                                    </p>
-                                    <a href="https://www.etanom.com/product/plant-a-tree/" class="btn-green my-8">Plant Now</a>
-                                </div>
-                            </div>
-                        </section>
-                        <section id="why">
-                            <div class="text-center">
-                                <h1 class="mb-20">Why Plant With Us</h1>
-                                <div class="grid grid-cols-4 gap-4 cards mb-20">
-                                    <div>
-                                        <img loading="lazy" decoding="async" width="300" height="300" src="https://www.etanom.com/wp-content/uploads/2024/09/1-300x300.png" class="elementor-animation-grow attachment-medium size-medium wp-image-1767" alt="">
-                                        <h4>Take Climate Action</h4>
-                                        <p>Do your share of mitigating global warming through reforestation</p>
-                                    </div>
-                                    <div>
-                                        <img loading="lazy" decoding="async" width="300" height="300" src="https://www.etanom.com/wp-content/uploads/2024/09/2-300x300.png" class="elementor-animation-grow attachment-medium size-medium wp-image-1768" alt="">
-                                        <h4>Boost local Biodiversity</h4>
-                                        <p>Plant native and local species that support Philippine ecosystem</p>
-                                    </div>
-                                    <div>
-                                        <img loading="lazy" decoding="async" width="300" height="300" src="https://www.etanom.com/wp-content/uploads/2024/09/3-300x300.png" class="elementor-animation-grow attachment-medium size-medium wp-image-1769" alt="">
-                                        <h4>Support Local Communities</h4>
-                                        <p>Provide income to farmers and indigenous people</p>
-                                    </div>
-                                    <div>
-                                        <img loading="lazy" decoding="async" width="300" height="300" src="https://www.etanom.com/wp-content/uploads/2024/09/4-300x300.png" class="elementor-animation-grow attachment-medium size-medium wp-image-1770" alt="">
-                                        <h4>Monitor your progress</h4>
-                                        <p>Keep track of your climate action with us through timely updates</p>
-                                    </div>
-                                </div>
-                                <a href="https://www.etanom.com/product/plant-a-tree/" class="btn-green">Plant Now</a>
-                            </div>
-                        </section>
-                        <section id="contact" class="px-32 pt-32 pb-32">
-                            <div class="card rounded-3xl p-8 text-center">
-                                <h1 class="text-white text-bold pt-5">
-                                    Stay Updated
-                                </h1>
-                                <h3 class="text-white text-bold py-10">Join our email list to get notified of our latest updates.</h3>
-                                <div class="bg-white text-left p-4">
-                                    <p>Email Address <span class="text-red">*</span></p>
-                                    <input type="email" name="EMAIL" class="required email mb-12" id="mce-EMAIL" required="" value="" aria-required="true">
-                                    <div class="flex justify-between">
-                                        <button class="bg-black text-white rounded-md py-1 px-4">Subscribe</button>
-                                        <img decoding="async" class="refferal_badge" src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg" alt="Intuit Mailchimp" style="width: 220px; height: 40px; display: flex; padding: 2px 0px; justify-content: center; align-items: center;">
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                    </main>
-                    {{-- <main class="mt-6">
                         <div class="grid gap-6 lg:grid-cols-2 lg:gap-8">
                             <a
                                 href="https://laravel.com/docs"
@@ -260,33 +165,13 @@
                                 </div>
                             </div>
                         </div>
-                    </main> --}}
+                    </main>
 
+                    <footer class="py-16 text-center text-sm text-black dark:text-white/70">
+                        Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
+                    </footer>
                 </div>
             </div>
-            <footer class="relative pt-16 flex mx-auto flex-flow-col">
-                <div class="grid gap-6 lg:grid-cols-2 lg:gap-8 mx-auto max-w-2xl px-6  lg:max-w-7xl pb-16">
-                    <div class="text-left grid content-between">
-                        <img src="https://www.etanom.com/wp-content/uploads/2024/07/logo-green.png" class="attachment-full size-full wp-image-9" alt="eTanom Logo">
-                        <p class="pt-1 pb-4">A web platform for reforestation. This startup company is based in the Mindanao, Philippines</p>
-                        <a class="elementor-icon elementor-social-icon elementor-social-icon-facebook-f elementor-repeater-item-3f1b7ac" href="https://www.facebook.com/eTanomPH" target="_blank">
-                            <svg class="e-font-icon-svg e-fab-facebook-f" viewBox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path></svg>	
-                        </a>
-                    </div>
-                    <div class="text-right grid content-between">
-                        <h3 class="green-text font-bold">Address</h3>
-                        <p class="font-xs py-4 pl-12">iDEYA Office <br>
-                            Building 22, College of Business Administration and Accountancy- Annex <br>
-                            Magkuno St., Mindanao State University-Iligan Institute of Technology, Andres Bonifacio Avenue, Tibanga <br>
-                            9200 Iligan City, Philippines</p>
-                        <p>Email: dreamerlamberte@gmail.com</p>
-                    </div>
-                </div>
-                <div class="footer-green text-white text-center">
-                    <p class="py-2">eTanom by Sikai Inc. © 2024 All Rights Reserved.</p>
-                </div>
-                {{-- Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }}) --}}
-            </footer>
         </div>
     </body>
 </html>

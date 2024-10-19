@@ -1,3 +1,167 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+h1, h2, h3, h4, h5, h6, p, a, span{
+    font-family: "Poppins", Sans-serif;
+}
+.green-text{
+    color: #4DA443;
+}
+.text-red{
+    color: red;
+}
+input#mce-EMAIL{
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+    text-indent: 2%;
+    border-radius: 5px;
+}
+header .green-text{
+    padding: 0;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: capitalize;
+    font-style: normal;
+    text-decoration: none;
+    line-height: 1em;
+    letter-spacing: 0px;
+    word-spacing: 0em;
+}
+.hover\:text-green\/70:hover{
+    color: #324A6D;
+    border-bottom: 1px solid #324A6D;
+    border-radius: 0;
+}
+#docs-card{
+    background-color: #FFFFFF;
+    border: 0;
+}
+#docs-card p{
+    color: #324A6D;
+    font-size: 22px;
+    font-weight: 300;
+    text-transform: none;
+    font-style: normal;
+    text-decoration: none;
+    line-height: 1.5em;
+    letter-spacing: 0px;
+    word-spacing: 0em;
+    margin-bottom: 2rem;
+    padding: 0% 15% 0% 0%;
+}
+#docs-card h1,
+h1{
+    color: #4DA443;
+    font-size: 65px;
+    font-weight: 600;
+    text-transform: none;
+    font-style: normal;
+    text-decoration: none;
+    line-height: 1.2em;
+    letter-spacing: 0px;
+    word-spacing: 0em;
+}
+.btn-green{
+    background-color: #4DA443;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: capitalize;
+    font-style: normal;
+    text-decoration: none;
+    line-height: 1em;
+    letter-spacing: 0px;
+    word-spacing: 0em;
+    fill: #FFFFFF;
+    color: #FFFFFF;
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-color: #4DA443;
+    border-radius: 100px 100px 100px 100px;
+    padding: 16px 55px 16px 55px;
+    
+}
+h2{
+    color: #324A6D;
+    font-size: 29px;
+    font-weight: bold;
+    text-transform: none;
+    font-style: normal;
+    text-decoration: none;
+    line-height: 1.5em;
+    letter-spacing: 0px;
+    word-spacing: 0em;
+}
+#what h1{
+    margin: 0 0 20px;
+}
+#what p{
+    margin: 41px 41px 41px 41px;
+}
+#plant{
+    margin:5rem 0;
+}
+#plant .card{
+    background-color: #EAB305;
+}
+.bg-img{
+    height: 100%;
+    width: 100%;
+    background-image: url(https://www.etanom.com/wp-content/uploads/2024/09/IMG_9850-1024x598.png);
+}
+.text-brown{
+    color: #4D3105;
+    font-size: 5.vw;
+    line-height: 1.1em;
+    letter-spacing: -2px;
+    font-weight: 500;;
+    word-spacing: 0em;
+}
+.text-dark2{
+    color: #212121;
+}
+#why h4{
+    margin-bottom: 15px;
+    color: #1C244B;
+    font-size: 22px;
+    font-weight: 600;
+}
+#why p{
+    color: #324A6D;
+    font-size: 16px;
+    font-weight: 300;
+}
+#contact .card{
+    background-color: #83B34F;
+}
+#contact .h3{
+    font-size: 22px;
+    font-weight: 300;
+}
+
+footer{
+    background-color: #FFF5DA
+}
+footer .wp-image-9{
+    max-height: 49px;
+    width: 228px;
+}
+.elementor-social-icon svg{
+    max-width: 23px !important;
+    max-height: 23px !important;
+    color: #4DA443;
+}
+.font-xs{
+    font-size: 12px;
+}
+footer h3{
+    font-size: 22px;
+    color: #348244;
+}
+.footer-green{
+    background-color: #4DA443;
+}
+.flex-flow-col{
+    flex-flow: column;
+}
